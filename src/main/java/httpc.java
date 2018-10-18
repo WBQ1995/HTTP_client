@@ -1,5 +1,3 @@
-package ca.concordia.Assignment1;
-
 /**
  * Hello world!
  *

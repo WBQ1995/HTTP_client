@@ -1,5 +1,3 @@
-package ca.concordia.Assignment1;
-
 import java.util.HashMap;
 
 enum Method{GET,POST,HELP}

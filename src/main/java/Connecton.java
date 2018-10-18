@@ -1,5 +1,3 @@
-package ca.concordia.Assignment1;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileWriter;
