@@ -30,6 +30,7 @@ public class Connecton {
 			clientSocketChannel = SocketChannel.open();
 			clientSocketChannel.configureBlocking(false);
 			clientSocketChannel.connect(serverAdress);
+
 			if(clientSocketChannel.finishConnect()){
 				System.out.println("Connect to server successfully...\n");
 			}
@@ -113,7 +114,7 @@ public class Connecton {
 	        		writeFile(request.getFileName(),headerAndBody[1]);
 	        		System.out.println("Body of the reponse is written to file: " + request.getFileName() + "\r\n");
 	        }
-		clientSocketChannel.close();
+		//clientSocketChannel.close();
 		}
 
 	public void writeFile(String fileName,String data) throws IOException {
@@ -121,5 +122,9 @@ public class Connecton {
 		FileWriter writer = new FileWriter(file);
 		writer.write(data);
 		writer.close();
+	}
+
+	public SocketChannel getClientSocketChannel(){
+		return clientSocketChannel;
 	}
 }
